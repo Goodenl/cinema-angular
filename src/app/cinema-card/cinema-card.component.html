@@ -1,0 +1,7 @@
+<div class="cinema-card">
+	<h3 class="cinema-card__title">{{cinema.title}}</h3>
+	<p class="cinema-card__description">{{cinema.description}}</p>
+	<ul class="cinema-card__genre-list">
+		<li *ngFor="let genre of cinema.genres" class="cinema-card__genre-item">{{genre}}</li>
+	</ul>
+</div>
