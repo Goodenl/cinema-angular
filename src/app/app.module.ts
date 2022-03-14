@@ -14,6 +14,7 @@ import { CinemaContiniueWatchComponent } from './cinema-continiue-watch/cinema-c
 import { CinemaTrendsComponent } from './cinema-trends/cinema-trends.component';
 import { CinemaTrendCardComponent } from './cinema-trend-card/cinema-trend-card.component';
 import { CinemaGenresComponent } from './cinema-genres/cinema-genres.component';
+import { CinemaHomeComponent } from './cinema-home/cinema-home.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CinemaGenresComponent } from './cinema-genres/cinema-genres.component';
     CinemaContiniueWatchComponent,
     CinemaTrendsComponent,
     CinemaTrendCardComponent,
-    CinemaGenresComponent
+    CinemaGenresComponent,
+    CinemaHomeComponent
   ],
   imports: [
     BrowserModule,
