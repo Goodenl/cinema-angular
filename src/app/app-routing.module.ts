@@ -5,7 +5,7 @@ import { CinemaPageComponent } from './cinema-page/cinema-page.component';
 
 const routes: Routes = [
 	{path: '', component: CinemaHomeComponent},
-	{path: '/detail/:id', component: CinemaPageComponent}
+	{path: 'detail/:id', component: CinemaPageComponent}
 ];
 
 @NgModule({
