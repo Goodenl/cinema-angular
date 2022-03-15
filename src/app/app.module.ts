@@ -15,6 +15,8 @@ import { CinemaTrendsComponent } from './cinema-trends/cinema-trends.component';
 import { CinemaTrendCardComponent } from './cinema-trend-card/cinema-trend-card.component';
 import { CinemaGenresComponent } from './cinema-genres/cinema-genres.component';
 import { CinemaHomeComponent } from './cinema-home/cinema-home.component';
+import { CinemaDiscoverComponent } from './cinema-discover/cinema-discover.component';
+import { CinemaSearchComponent } from './cinema-search/cinema-search.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { CinemaHomeComponent } from './cinema-home/cinema-home.component';
     CinemaTrendsComponent,
     CinemaTrendCardComponent,
     CinemaGenresComponent,
-    CinemaHomeComponent
+    CinemaHomeComponent,
+    CinemaDiscoverComponent,
+    CinemaSearchComponent
   ],
   imports: [
     BrowserModule,
