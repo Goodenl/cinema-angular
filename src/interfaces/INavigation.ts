@@ -1,4 +1,6 @@
+import { SafeResourceUrl } from "@angular/platform-browser";
+
 export interface Navigation {
-	src: string,
+	src: SafeResourceUrl,
 	link: string
 }

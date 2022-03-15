@@ -11,6 +11,7 @@
 	background-color: rgba(var(--primary-rgb), .9)
 	backdrop-filter: blur( 2px )
 	-webkit-backdrop-filter: blur( 2px )
+	z-index: var(--z-medium)
 
 .nav
 	width: 100%
@@ -22,3 +23,15 @@
 	&__item
 		width: 30px
 		height: 30px
+		position: relative
+
+		a
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0
+			right: 0
+
+		iframe
+			pointer-events: none
+			
