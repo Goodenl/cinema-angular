@@ -1,11 +1,11 @@
-<div class="app-cinema-trend-card">
-	<img src="/assets/img/slide.png" alt="">
+<div class="cinema-trend-card">
+	<img class="cinema-trend-card__preview" [src]="trend.srcPreview" alt="">
 	<div class="rating">
 		<p>IMDb</p>
 		<img src="/assets/icons/star.png" alt="">
-		<span>8.4</span>
+		<span>{{trend.rating}}</span>
 	</div>
 	<button class="film-name"> 
-		<h4>Avengers: Endgame</h4>
+		<h4>{{trend.title}}</h4>
 	</button>
 </div>

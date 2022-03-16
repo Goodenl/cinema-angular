@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Trend } from "@/interfaces/ITrend"
 
 @Component({
   selector: 'app-cinema-trend-card',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cinema-trend-card.component.sass']
 })
 export class CinemaTrendCardComponent implements OnInit {
+
+	@Input() trend!: Trend;
 
   constructor() { }
 

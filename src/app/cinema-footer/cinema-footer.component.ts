@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Navigation } from '@/interfaces/INavigation'
 
-import {DomSanitizer} from '@angular/platform-browser';
-import { Router } from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-cinema-footer',
@@ -12,7 +11,7 @@ import { Router } from '@angular/router';
 export class CinemaFooterComponent implements OnInit {
   navList!: Navigation[];
   
-  constructor(private sanitizer: DomSanitizer, private router: Router) {
+  constructor(private sanitizer: DomSanitizer) {
     this.navList = [
       {src: sanitizer.bypassSecurityTrustResourceUrl('/assets/img/nav/home.svg'), link: '/'},
       {src: sanitizer.bypassSecurityTrustResourceUrl('/assets/img/nav/discover.svg'), link: '/discover'},
