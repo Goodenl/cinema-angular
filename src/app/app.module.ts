@@ -17,6 +17,7 @@ import { CinemaGenresComponent } from './cinema-genres/cinema-genres.component';
 import { CinemaHomeComponent } from './cinema-home/cinema-home.component';
 import { CinemaDiscoverComponent } from './cinema-discover/cinema-discover.component';
 import { CinemaSearchComponent } from './cinema-search/cinema-search.component';
+import { CinemaGenreComponent } from './cinema-genre/cinema-genre.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CinemaSearchComponent } from './cinema-search/cinema-search.component';
     CinemaGenresComponent,
     CinemaHomeComponent,
     CinemaDiscoverComponent,
-    CinemaSearchComponent
+    CinemaSearchComponent,
+    CinemaGenreComponent
   ],
   imports: [
     BrowserModule,

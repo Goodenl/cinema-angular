@@ -1,0 +1,20 @@
+.genre
+
+	&__link
+		position: relative
+		color: #FFF
+		font-weight: 400
+		font-size: 16px
+		line-height: 19px
+		letter-spacing: 0.02em
+
+		&.genre__link--active
+			color: var(--accent)
+			&:before
+				content: ""
+				position: absolute
+				top: 27px
+				left: 0
+				width: 19px
+				height: 2px
+				background-color: var(--accent)
