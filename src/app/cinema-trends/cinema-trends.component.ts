@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import SwiperCore, { EffectCreative } from 'swiper';
+
+SwiperCore.use([EffectCreative])
 
 @Component({
   selector: 'app-cinema-trends',
@@ -9,7 +12,6 @@ export class CinemaTrendsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

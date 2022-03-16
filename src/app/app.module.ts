@@ -19,6 +19,8 @@ import { CinemaDiscoverComponent } from './cinema-discover/cinema-discover.compo
 import { CinemaSearchComponent } from './cinema-search/cinema-search.component';
 import { CinemaGenreComponent } from './cinema-genre/cinema-genre.component';
 
+import { SwiperModule } from 'swiper/angular';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +41,7 @@ import { CinemaGenreComponent } from './cinema-genre/cinema-genre.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SwiperModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable

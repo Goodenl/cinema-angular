@@ -1,1 +1,24 @@
-<app-cinema-trend-card></app-cinema-trend-card>
+<swiper
+  [slidesPerView]="1.2"
+  [spaceBetween]="24"
+  class="trends"
+  [creativeEffect]="{
+        prev: {
+          shadow: true,
+          translate: [0, 0, -400]
+        },
+        next: {
+          translate: ['100%', 0, 0]
+        }
+      }"
+>
+  <ng-template swiperSlide>
+  	<app-cinema-trend-card></app-cinema-trend-card>
+  </ng-template>
+  <ng-template swiperSlide>
+  	<app-cinema-trend-card></app-cinema-trend-card>
+  </ng-template>
+  <ng-template swiperSlide>
+  	<app-cinema-trend-card></app-cinema-trend-card>
+  </ng-template>
+</swiper>
