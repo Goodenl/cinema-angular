@@ -20,6 +20,8 @@ import { CinemaSearchComponent } from './cinema-search/cinema-search.component';
 import { CinemaGenreComponent } from './cinema-genre/cinema-genre.component';
 
 import { SwiperModule } from 'swiper/angular';
+import { CinemaDiscoverCardsComponent } from './cinema-discover-cards/cinema-discover-cards.component';
+import { CinemaDiscoverCardComponent } from './cinema-discover-card/cinema-discover-card.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { SwiperModule } from 'swiper/angular';
     CinemaHomeComponent,
     CinemaDiscoverComponent,
     CinemaSearchComponent,
-    CinemaGenreComponent
+    CinemaGenreComponent,
+    CinemaDiscoverCardsComponent,
+    CinemaDiscoverCardComponent
   ],
   imports: [
     BrowserModule,
