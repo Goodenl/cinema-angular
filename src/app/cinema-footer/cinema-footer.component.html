@@ -1,8 +1,11 @@
 <footer class="footer">
 	<nav class="nav">
-		<ul class="nav__list">
+		<ul class="nav__list" #list>
 			<li *ngFor="let nav of navList" class="nav__item">
-				<a [routerLink]="nav.link" ><iframe [src]="nav.src" frameborder="0"></iframe></a>
+			<!-- {{selectedNavItem === nav}} -->
+				<a [routerLink]="nav.link" (click)="selectNavItem($event, nav)">
+					<iframe [src]="nav.src" #navItem [attr.firstItem]="nav.ref == 'home' ? true : null" class="nav__icon" frameborder="0"></iframe>
+				</a>
 			</li>
 		</ul>
 	</nav>
