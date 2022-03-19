@@ -18,10 +18,12 @@ import { CinemaHomeComponent } from './cinema-home/cinema-home.component';
 import { CinemaDiscoverComponent } from './cinema-discover/cinema-discover.component';
 import { CinemaSearchComponent } from './cinema-search/cinema-search.component';
 import { CinemaGenreComponent } from './cinema-genre/cinema-genre.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SwiperModule } from 'swiper/angular';
 import { CinemaDiscoverCardsComponent } from './cinema-discover-cards/cinema-discover-cards.component';
 import { CinemaDiscoverCardComponent } from './cinema-discover-card/cinema-discover-card.component';
+import { NgxMasonryModule } from 'ngx-masonry';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { CinemaDiscoverCardComponent } from './cinema-discover-card/cinema-disco
     BrowserModule,
     AppRoutingModule,
     SwiperModule,
+    NgxMasonryModule,
+    BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable

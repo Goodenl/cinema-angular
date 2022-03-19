@@ -20,6 +20,8 @@
     "@angular/router": "~13.2.0",
     "@angular/service-worker": "~13.2.0",
     "@videogular/ngx-videogular": "^5.0.1",
+    "masonry-layout": "^4.2.2",
+    "ngx-masonry": "^13.0.0",
     "rxjs": "~7.5.0",
     "swiper": "^8.0.7",
     "tslib": "^2.3.0",

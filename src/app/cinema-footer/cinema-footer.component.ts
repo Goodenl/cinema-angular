@@ -10,33 +10,35 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class CinemaFooterComponent implements AfterViewInit {
   navList!: Navigation[];
+  currentPath: string = new URL(document.URL).pathname
 
   @ViewChildren('navItem') navItems: any;
   
   constructor(private sanitizer: DomSanitizer ) {
     this.navList = [
-      {src: sanitizer.bypassSecurityTrustResourceUrl('/assets/img/nav/home.svg'), link: '/', ref: "home"},
-      {src: sanitizer.bypassSecurityTrustResourceUrl('/assets/img/nav/discover.svg'), link: '/discover', ref: "discover"},
-      {src: sanitizer.bypassSecurityTrustResourceUrl('/assets/img/nav/profile.svg'), link: '/profile', ref: "profile  "},
+      {src: sanitizer.bypassSecurityTrustResourceUrl('/assets/img/nav/home.svg'), link: '/'},
+      {src: sanitizer.bypassSecurityTrustResourceUrl('/assets/img/nav/discover.svg'), link: '/discover'},
+      {src: sanitizer.bypassSecurityTrustResourceUrl('/assets/img/nav/profile.svg'), link: '/profile'},
     ];
   }
 
   ngAfterViewInit(): void {
-    const firstNavItem = this.navItems.toArray()
+    const currentNavItem = this.navItems.toArray()
                             .find((r: any) => r.nativeElement.hasAttribute('firstItem'))
 
+                            
     setTimeout(() => {
-      const needPath = firstNavItem.nativeElement.contentDocument.querySelector('.main-changes')
-      this.setNavItem(this.navList[0], needPath)
+      const needSVGPath = currentNavItem.nativeElement.contentDocument.querySelector('.main-changes')
+      this.setNavItem(this.navList[0], needSVGPath)
     }, 2000)
   }
 
   private setNavItem(navItem: Navigation, element: any) {
     for (let el of this.navItems) {
-      const pathEl = el.nativeElement.contentDocument.firstChild.querySelector('.main-changes')
-      if (pathEl) {
-        pathEl.style.fill = '#fff'
-        pathEl.style.fillOpacity = `0.2`
+      const svgPathEl = el.nativeElement.contentDocument.firstChild.querySelector('.main-changes')
+      if (svgPathEl) {
+        svgPathEl.style.fill = '#fff'
+        svgPathEl.style.fillOpacity = `0.2`
       }
     }
 
@@ -47,9 +49,9 @@ export class CinemaFooterComponent implements AfterViewInit {
   selectNavItem(event: any, navItem: Navigation) {
     
     const iframe = event.currentTarget.querySelector("iframe.nav__icon")
-    const needPath = iframe.contentDocument.querySelector('.main-changes')
+    const needSVGPath = iframe.contentDocument.querySelector('.main-changes')
 
-    this.setNavItem(navItem, needPath)
+    this.setNavItem(navItem, needSVGPath)
     
   }
 }

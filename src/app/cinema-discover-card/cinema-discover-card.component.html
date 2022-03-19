@@ -1,4 +1,4 @@
-<div class="cinema-discover-card">
-	<img src="/assets/img/cinema-discover-card-img.png" alt="" class="cinema-discover-card__img">
-	<h4 class="cinema-discover-card__title">Soul <span>(2020)</span></h4>
+<div [class]="{'cinema-discover-card': true, 'cinema-discover-card--small': discoverCard.small}">
+	<img [src]="discoverCard.srcPreview" alt="" class="cinema-discover-card__img">
+	<h4 class="cinema-discover-card__title">{{discoverCard.title}} <span>({{discoverCard.year}})</span></h4>
 </div>

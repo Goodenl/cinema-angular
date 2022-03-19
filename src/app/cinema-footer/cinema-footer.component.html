@@ -4,7 +4,7 @@
 			<li *ngFor="let nav of navList" class="nav__item">
 			<!-- {{selectedNavItem === nav}} -->
 				<a [routerLink]="nav.link" (click)="selectNavItem($event, nav)">
-					<iframe [src]="nav.src" #navItem [attr.firstItem]="nav.ref == 'home' ? true : null" class="nav__icon" frameborder="0"></iframe>
+					<iframe [src]="nav.src" #navItem [attr.firstItem]="nav.link == currentPath ? true : null" class="nav__icon" frameborder="0"></iframe>
 				</a>
 			</li>
 		</ul>

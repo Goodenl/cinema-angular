@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { DiscoverCard } from "@/interfaces/IDiscoverCard"
 
 @Component({
   selector: 'app-cinema-discover-card',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cinema-discover-card.component.sass']
 })
 export class CinemaDiscoverCardComponent implements OnInit {
+
+	@Input() discoverCard!: DiscoverCard;
 
   constructor() { }
 
