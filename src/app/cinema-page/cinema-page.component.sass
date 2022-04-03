@@ -31,8 +31,9 @@
 			background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 28.65%, rgba(0, 0, 0, 0) 64.06%, rgba(0, 0, 0, 0.8) 100%)
 
 	&__preview
-		object-fit: contain
+		object-fit: cover
 		height: 100%
+		width: 100%
 		position: absolute
 		bottom: 0
 		top: 0
@@ -40,9 +41,42 @@
 		right: 0
 
 	&__play-button
+		width: 64px
+		height: 64px
+		display: flex
+		align-items: center
+		justify-content: center
+
+		border: 1px solid rgba(255, 255, 255, 0.25)
+		background: linear-gradient(141.08deg, rgba(255, 255, 255, 0.25) 13.56%, rgba(255, 255, 255, 0) 85.76%)
+		backdrop-filter: blur(3px)
+
 		z-index: 2
 		border-radius: 50%
-	
+
+		img
+			filter: drop-shadow(5px 5px 10px rgba(254, 86, 70, 0.15))
+			position: relative
+			right: -2px
+
 	&__content
 		display: flex
 		flex-direction: column
+		padding-top: 24px
+
+		*
+			color: var(--white)
+
+	&__quality
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-left: 8px
+		min-width: 29px
+		padding-top: 4px
+		padding-bottom: 5px
+
+		background: rgba(var(--white-rgb), 0.05)
+		backdrop-filter: blur(3px)
+		border-radius: var(--border-radius-small)
+		border: 1px solid rgba(var(--white-rgb), 0.25)

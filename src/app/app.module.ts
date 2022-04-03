@@ -5,10 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CinemaListComponent } from './cinema-list/cinema-list.component';
-import { CinemaHeaderComponent } from './cinema-header/cinema-header.component';
 import { CinemaFooterComponent } from './cinema-footer/cinema-footer.component';
-import { CinemaCardComponent } from './cinema-card/cinema-card.component';
 import { CinemaPageComponent } from './cinema-page/cinema-page.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
@@ -31,10 +28,7 @@ import { StoreModule } from '@ngrx/store';
 @NgModule({
   declarations: [
     AppComponent,
-    CinemaListComponent,
-    CinemaHeaderComponent,
     CinemaFooterComponent,
-    CinemaCardComponent,
     CinemaPageComponent,
     CinemaContiniueWatchComponent,
     CinemaTrendsComponent,
