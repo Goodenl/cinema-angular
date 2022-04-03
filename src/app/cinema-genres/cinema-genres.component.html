@@ -1,10 +1,7 @@
 <div class="genres">
-	<app-cinema-genre></app-cinema-genre>
-	<app-cinema-genre></app-cinema-genre>
-	<app-cinema-genre></app-cinema-genre>
-	<app-cinema-genre></app-cinema-genre>
-	<app-cinema-genre></app-cinema-genre>
-	<app-cinema-genre></app-cinema-genre>
-	<app-cinema-genre></app-cinema-genre>
-	<app-cinema-genre></app-cinema-genre>
+	<app-cinema-genre
+		*ngFor="let genre of genres"
+		(click)="selectGenre(genre)"
+		[item]="genre"
+	></app-cinema-genre>
 </div>

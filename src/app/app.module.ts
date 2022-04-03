@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'; 
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +26,7 @@ import { SwiperModule } from 'swiper/angular';
 import { CinemaDiscoverCardsComponent } from './cinema-discover-cards/cinema-discover-cards.component';
 import { CinemaDiscoverCardComponent } from './cinema-discover-card/cinema-discover-card.component';
 import { NgxMasonryModule } from 'ngx-masonry';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -49,13 +52,16 @@ import { NgxMasonryModule } from 'ngx-masonry';
     AppRoutingModule,
     SwiperModule,
     NgxMasonryModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
-    })
+    }),
+    StoreModule.forRoot({}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]

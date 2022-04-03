@@ -1,8 +1,9 @@
 import { SafeResourceUrl } from "@angular/platform-browser";
 
 export interface DiscoverCard {
-	title: string,
-	srcPreview: SafeResourceUrl,
-	year: string,
+	id: number
+	title: string
+	srcPreview: SafeResourceUrl
+	year: string
 	small: boolean
 }

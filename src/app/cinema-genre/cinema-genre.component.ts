@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IGenre } from "@/interfaces/IGenre"
 
 @Component({
   selector: 'app-cinema-genre',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CinemaGenreComponent implements OnInit {
 
-  constructor() { }
+	@Input() item!: IGenre;
 
-  ngOnInit(): void {
-  }
+  constructor() {}
+
+  ngOnInit(): void {}
 
 }

@@ -1,5 +1,10 @@
 
 <!-- https://www.npmjs.com/package/ngx-masonry -->
-<ngx-masonry class="cinema-discover-cards" [options]="{ gutter: 19 }">
-	<app-cinema-discover-card ngxMasonryItem *ngFor="let discoverCard of discoverCards" [discoverCard]="discoverCard"></app-cinema-discover-card>
+<ngx-masonry class="cinema-discover-cards" [options]="{ gutter: 19 }" [ordered]="true">
+	<app-cinema-discover-card
+		ngxMasonryItem
+		*ngFor="let discoverCard of discoverCards"
+		[discoverCard]="discoverCard"
+		[routerLink]="'/detail/' + discoverCard.id"
+	></app-cinema-discover-card>
 </ngx-masonry>

@@ -19,6 +19,9 @@
 	border: none
 	font-smoothing: antialiased
 
+::-webkit-scrollbar
+	display: none
+
 button, iframe, a
 	-webkit-tap-highlight-color: transparent
 	-webkit-touch-callout: none
@@ -41,7 +44,7 @@ h3
 	line-height: 1.2
 
 .container
-	max-width: 1140px
+	max-width: 720px
 	padding: 20px
 	margin: 0 auto
 
@@ -49,8 +52,16 @@ h3
 	> span
 		color: var(--accent)
 
-.main 
+main 
 	width: 100%
 	min-height: 100vh
-	padding: 44px 24px 75px
 	background-color: var(--primary)
+	
+	&.main
+		padding: 44px 24px 75px
+
+.row
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	

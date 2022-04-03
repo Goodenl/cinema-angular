@@ -1,1 +1,1 @@
-<a class="genre__link" href="#" >Movies</a>
+<a [ngClass]="{'genre__link': true, 'genre__link--active': item.selected}" >{{ item.title }}</a>
